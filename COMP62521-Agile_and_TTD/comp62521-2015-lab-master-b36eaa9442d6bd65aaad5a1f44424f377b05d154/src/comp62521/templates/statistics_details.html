@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}{{ args.title }}{% endblock %}
+{% block content %}
+
+<h1>{{ args.title }}</h1>
+
+<table id="datatable" class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        {%
+        for column in args.data[0]
+        %}
+        <th style="vertical-align: middle">
+            <a id="{{ column[-2:] }}" href="#" onclick="setField(this.id);">{{column[:-2] }}</a>
+        </th>
+        {%
+        endfor
+        %}
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for row in args.data[1] %}
+    <tr>
+        {% for data_item in row %}
+        {% if loop.first and args.url != "publication_summary" and args.url != "publication_year" and args.url != "author_year" %}
+        <td><a href="/stats_author/{{ data_item }}"/>{{ data_item }}</td>
+        {% else %}
+        <td>{{ data_item }}</td>
+        {% endif %}
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<br/>
+<br/>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<form id="myForm" action="{{ args.url }}" method="GET">
+    <input id="key" name="field" type="hidden" value="0a"/>
+</form>
+
+<script>
+    function setField(field)
+    {
+        document.getElementById('key').value = field;
+        document.getElementById('myForm').submit();
+    }
+
+    $(function ()
+	{
+	    $('#container').highcharts({
+	        data: {
+	            table: 'datatable'
+	        },
+	        chart: {
+	            type: 'column'
+	        },
+	        title: {
+	            text: 'Statistics'
+	        },
+	        yAxis: {
+	            allowDecimals: false,
+	            title: {
+	                text: 'Units'
+	            }
+	        },
+	        tooltip: {
+	            formatter: function () {
+	                return '<b>' + this.series.name + '</b><br/>' +
+	                    this.point.y + ' ' + this.point.name.toLowerCase();
+	            }
+	        }
+	    });
+	});
+
+</script>
+
+{% endblock %}

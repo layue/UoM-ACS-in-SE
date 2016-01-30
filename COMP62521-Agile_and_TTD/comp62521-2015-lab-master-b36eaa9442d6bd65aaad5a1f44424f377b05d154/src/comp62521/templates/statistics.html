@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+
+<div style="width: 60%; display: table-cell">
+
+    <a href="/search" class="list-group-item"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search
+        <span class="badge pull-right"
+              title="Search"
+              data-toggle="popover1"
+              data-trigger="hover"
+              data-content="This page provides a powerful search engine to look up authors and their information by any
+                            part of their names."
+              data-placement="right">?</span>
+    </a>
+
+    <a href="/statisticsdetails/publication_summary" class="list-group-item">
+        <span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span> Publication Summary
+        <span class="badge pull-right"
+              title="Publication Summary"
+              data-toggle="popover2"
+              data-trigger="hover"
+              data-content="Click on this page to get the summary of number of authors and number of publications per
+              each type of publication (Conference papers, journals, books and book chapters)."
+              data-placement="right">?</span>
+    </a>
+
+    <a href="/statisticsdetails/publication_author" class="list-group-item">
+        <span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span> Publication by Author
+        <span class="badge pull-right"
+              title="Author Publications"
+              data-toggle="popover3"
+              data-trigger="hover"
+              data-content="This page provides a list of the amount of publications where each author has participated in."
+              data-placement="right">?</span>
+    </a>
+
+    <a href="/statisticsdetails/publication_year" class="list-group-item">
+        <span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span> Publication by Year
+        <span class="badge pull-right"
+              title="Publications by Year"
+              data-toggle="popover4"
+              data-trigger="hover"
+              data-content="This page provides a detail of the number of publications broken down by year."
+              data-placement="right">?</span>
+    </a>
+
+    <a href="/statisticsdetails/author_year" class="list-group-item">
+        <span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span> Author by Year
+        <span class="badge pull-right"
+              title="Authors by Year"
+              data-toggle="popover5"
+              data-trigger="hover"
+              data-content="Click on this page to get an overview of the amount of authors that participated on publications
+                            broken down by year of publication."
+              data-placement="right">?</span>
+    </a>
+
+    <a href="/statisticsdetails/author_summary" class="list-group-item">
+        <span class="glyphicon glyphicon-education" aria-hidden="true"></span> Author Summary
+        <span class="badge pull-right"
+              title="Authors in Publications"
+              data-toggle="popover6"
+              data-trigger="hover"
+              data-content="Click on this page to find how many times an author has appeared first, last or is the only
+                            author of a publication."
+              data-placement="right">?</span>
+    </a>
+
+    <a href="/statisticsdetails/conf_paper_summary" class="list-group-item">
+        <span class="glyphicon glyphicon-education" aria-hidden="true"></span> Conference Papers Summary
+        <span class="badge pull-right"
+              title="Conference Papers Details"
+              data-toggle="popover7"
+              data-trigger="hover"
+              data-content="This page provides how many times an author has appeared first, last or alone in a Conference
+                            Paper Publication."
+              data-placement="right">?</span>
+    </a>
+
+    <a href="/statisticsdetails/journals_summary" class="list-group-item">
+        <span class="glyphicon glyphicon-education" aria-hidden="true"></span> Journals Summary
+        <span class="badge pull-right"
+              title="Journals Details"
+              data-toggle="popover8"
+              data-trigger="hover"
+              data-content="This page provides how many times an author has appeared first, last or alone in a Journal
+                            Publication."
+              data-placement="right">?</span>
+    </a>
+
+    <a href="/statisticsdetails/books_summary" class="list-group-item">
+        <span class="glyphicon glyphicon-education" aria-hidden="true"></span> Books Summary
+        <span class="badge pull-right"
+              title="Books Details"
+              data-toggle="popover9"
+              data-trigger="hover"
+              data-content="This page provides how many times an author has appeared first, last or alone in a Book
+                            Publication."
+              data-placement="right">?</span>
+    </a>
+
+    <a href="/statisticsdetails/book_chapters_summary" class="list-group-item">
+        <span class="glyphicon glyphicon-education" aria-hidden="true"></span> Book Chapters Summary
+        <span class="badge pull-right"
+              title="Book Chapters Details"
+              data-toggle="popover10"
+              data-trigger="hover"
+              data-content="This page provides how many times an author has appeared first, last or alone in a Book
+                            Chapter Publication."
+              data-placement="right">?</span>
+    </a>
+
+    <a href="/averages" class="list-group-item">
+        <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span> Averaged Year Data
+        <span class="badge pull-right"
+              title="Overall Averages"
+              data-toggle="popover11"
+              data-trigger="hover"
+              data-content="Click on this page to find several stats about the four types of publications such as average
+                            Authors per publication, Publications per Author, Publications in a Year and Authors in a Year."
+              data-placement="right">?</span>
+    </a>
+
+    <a href="/coauthors" class="list-group-item">
+        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Co-Authors
+        <span class="badge pull-right"
+              title="CoAuthor Details"
+              data-toggle="popover12"
+              data-trigger="hover"
+              data-content="In this page you can find the number and which co-authors are related to a determined author."
+              data-placement="right">?</span>
+    </a>
+
+    <a href="/separationDegrees" class="list-group-item">
+        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Separation Degrees
+        <span class="badge pull-right"
+              title="Separation Degrees"
+              data-toggle="popover13"
+              data-trigger="hover"
+              data-content="In this page you can select two authors and find the separation degrees between them."
+              data-placement="right">?</span>
+    </a>
+
+</div>
+
+<div style="display: table-cell;">
+    <br/><br/><br/><br/><br/>
+    <img src="http://www.gl-education.com/sites/gl/files/images/pass_logo_web.jpg" width="500" height="300"/>
+</div>
+
+<script>
+
+    $(document).ready(function(){
+        $('[data-toggle="popover1"]').popover();
+        $('[data-toggle="popover2"]').popover();
+        $('[data-toggle="popover3"]').popover();
+        $('[data-toggle="popover4"]').popover();
+        $('[data-toggle="popover5"]').popover();
+        $('[data-toggle="popover6"]').popover();
+        $('[data-toggle="popover7"]').popover();
+        $('[data-toggle="popover8"]').popover();
+        $('[data-toggle="popover9"]').popover();
+        $('[data-toggle="popover10"]').popover();
+        $('[data-toggle="popover11"]').popover();
+        $('[data-toggle="popover12"]').popover();
+        $('[data-toggle="popover13"]').popover();
+    });
+
+
+</script>
+
+{% endblock %}

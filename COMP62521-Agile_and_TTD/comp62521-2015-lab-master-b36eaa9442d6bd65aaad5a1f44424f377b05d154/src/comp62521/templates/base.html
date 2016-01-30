@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{% block title %}{% endblock %}</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+          integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+          crossorigin="anonymous">
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"
+          integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.10.0/vis.min.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+            integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
+            crossorigin="anonymous">
+    </script>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.10.0/vis.min.js"></script>
+
+    <style>
+        .popover{
+        width: 300px;
+        }
+    </style>
+
+</head>
+
+<body>
+<div id="page" style="margin-left: 10px;">
+    <div id="header">
+        <h1><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> PUBLICATIONS AND STATISTICS SYSTEM</h1>
+
+        <div id="navigation" style="width: 60%;">
+            <a href="/"
+               class="list-group-item active">
+                <span class="glyphicon glyphicon-home" aria-hidden="true"> Home
+            </a>
+        </div>
+    </div>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+    <h4>DATA SOURCE: {{ args.dataset }}</h4>
+</div>
+</body>
+</html>

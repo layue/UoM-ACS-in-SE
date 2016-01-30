@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% block title %}{{ args.title }}{% endblock %}
+{% block content %}
+
+<h1>{{ args.title }}</h1>
+
+<table id="datatable" class="table table-bordered table-striped">
+    <thead>
+    <tr>
+
+        {% for column in args.data[0]%}
+        <th style="vertical-align: middle">{{ column }}</th>
+        {% endfor %}
+    </tr>
+    </thead>
+
+    <tbody>
+
+    {% for row in args.data[1]%}
+    <tr>
+        {% for data_item in row %}
+        <td>{{ data_item }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<input id="author" type="hidden" value="{{ args.title }}"/>
+
+<br/>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<h3>Coauthor Network</h3>
+<div id="network" style="height: 500px; width: 800px; border: 2px solid black; border-radius: 25px;"></div>
+
+<table id="coauthors" border="1" style="display: none;">
+    {% for row in args.data[2] %}
+    <tr>
+        <td>{{ row }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<script>
+
+    //GRAPH DISPLAY
+
+    $(function ()
+	{
+	    $('#container').highcharts({
+	        data: {
+	            table: 'datatable',
+	            endRow: 4
+	        },
+	        chart: {
+	            type: 'column'
+	        },
+	        title: {
+	            text: 'Statistics'
+	        },
+	        yAxis: {
+	            allowDecimals: false,
+	            title: {
+	                text: 'Units'
+	            }
+	        },
+	        tooltip: {
+	            formatter: function () {
+	                return '<b>' + this.series.name + '</b><br/>' +
+	                    this.point.y + ' ' + this.point.name.toLowerCase();
+	            }
+	        }
+	    });
+	});
+
+
+    //COAUTHOR NETWORK DISPLAY
+
+    var table = document.getElementById("coauthors");
+
+    var nodes = null;
+    var edges = null;
+    var network = null;
+
+    // Create a data table with nodes.
+    nodes = [];
+
+    // Create a data table with links.
+    edges = [];
+
+    // Central node
+
+    nodes.push({
+        id: 1,
+        label: document.getElementById("author").value
+    });
+
+    // Adjacent nodes
+
+    for (var i = 0, row, id = 2; row = table.rows[i]; i++, id++)
+    {
+        nodes.push({
+            id: id,
+            label: row.cells[0].innerHTML
+        });
+
+        edges.push({
+            from: 1,
+            to: id,
+            length: 150,
+            width: 2
+        });
+    }
+
+
+    // create a network
+    var container = document.getElementById('network');
+
+    var data = {
+        nodes: nodes,
+        edges: edges
+    };
+
+    var options = {
+        nodes: {
+            scaling: {
+                min: 16,
+                max: 32
+            }
+        },
+        edges: {
+            color: 'gray',
+            smooth: false
+        },
+        physics: {
+            barnesHut: {
+                gravitationalConstant: -30000
+            },
+            stabilization: {
+                iterations: 2500
+            }
+        }
+    };
+
+    network = new vis.Network(container, data, options);
+
+
+
+</script>
+
+{% endblock %}

@@ -1,0 +1,121 @@
+<dblp>
+<inproceedings>
+    <author>Brian Sam Alice</author>
+    <author>Sam Alice</author>
+    <title>TITLE</title>
+    <year>9999</year>
+</inproceedings>
+<inproceedings>
+    <author>Samuel Alice</author>
+    <author>Alice Sam Brian</author>
+    <title>TITLE2</title>
+    <year>9999</year>
+</inproceedings>
+<inproceedings>
+    <author>Sam Brian</author>
+    <author>Samuel Brian</author>
+    <title>TITLE3</title>
+    <year>9999</year>
+</inproceedings>
+<inproceedings>
+    <author>Sam Alice</author>
+    <author>Brian Sam Alice</author>
+    <title>TITLE4</title>
+    <year>9999</year>
+</inproceedings>
+<inproceedings>
+    <author>Sam Alice</author>
+    <author>Brian Sam Alice</author>
+    <title>TITLE5</title>
+    <year>9998</year>
+</inproceedings>
+<inproceedings>
+    <author>Sam Alice</author>
+    <author>Brian Sam Alice</author>
+    <title>TITLE6</title>
+    <year>9997</year>
+</inproceedings>
+<inproceedings>
+    <author>Sam Alice</author>
+    <author>Brian Sam Alice</author>
+    <title>TITLE7</title>
+    <year>10</year>
+</inproceedings>
+<inproceedings>
+    <author>Samuel Brian</author>
+    <author>Brian Sam Alice</author>
+    <title>TITLE7</title>
+    <year>99998</year>
+</inproceedings>
+<article>
+    <author>Luke McDowell</author>
+    <author>Oren Etzioni</author>
+    <author>Alon Y. Halevy</author>
+    <title>Semantic email: theory and applications.</title>
+    <pages>153-183</pages>
+    <year>2004</year>
+    <volume>2</volume>
+    <journal>J. Web Sem.</journal>
+    <number>2</number>
+    <ee>http://dx.doi.org/10.1016/j.websem.2004.09.001</ee>
+    <url>http://www.informatik.uni-trier.de/~ley/db/journals/ws/ws2.html#McDowellEH04</url>
+</article>
+<incollection>
+    <author>Alice Esam</author>
+    <author>Brian Esam</author>
+    <author>Alice Sam</author>
+    <author>Brian Sam</author>
+    <title>Conceptual Modeling of Workflows.</title>
+    <pages>281-306</pages>
+    <year>2000</year>
+    <booktitle>Advances in Object-Oriented Data Modeling</booktitle>
+    <url>http://www.informatik.uni-trier.de/~ley/db/books/collections/Papazoglou2000.html#CasatiCPP00</url>
+</incollection>
+<book>
+    <author>Alice Esam</author>
+    <author>Brian Esam</author>
+    <author>Sam Samuel</author>
+    <author>Alice Sam</author>
+    <author>Brian Sam</author>
+    <author>Assam Delaney</author>
+    <title>Conceptual Modeling of Workflowing</title>
+    <year>2000</year>
+</book>
+<article>
+    <author>Alice Sammer</author>
+    <title>Semantic email: theory and applications.</title>
+    <year>2004</year>
+    <volume>2</volume>
+    <journal>J. Web Sem.</journal>
+    <number>2</number>
+    <ee>http://dx.doi.org/10.1016/j.websem.2004.09.001</ee>
+    <url>http://www.informatik.uni-trier.de/~ley/db/journals/ws/ws2.html#McDowellEH04</url>
+</article>
+<article>
+    <author>Brian Sammer</author>
+    <title>Semantic email: theory and applications.</title>
+    <year>2004</year>
+    <volume>2</volume>
+    <journal>J. Web Sem.</journal>
+    <number>2</number>
+    <ee>http://dx.doi.org/10.1016/j.websem.2004.09.001</ee>
+    <url>http://www.informatik.uni-trier.de/~ley/db/journals/ws/ws2.html#McDowellEH04</url>
+</article>
+<book>
+    <author>Alice Samming</author>
+    <author>Brian Esam</author>
+    <author>Mona Zaki</author>
+    <author>Gussam</author>
+    <author>Brian Sam</author>
+    <title>Conceptual Modeling of Workflowing1</title>
+    <year>2000</year>
+</book>
+<book>
+    <author>Alice Samming</author>
+    <author>Brian Esam</author>
+    <author>Brian Samming</author>
+    <author>Mona Zaki</author>
+    <title>Conceptual Modeling of Workflowing2</title>
+    <year>2000</year>
+</book>
+</dblp>

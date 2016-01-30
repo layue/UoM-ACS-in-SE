@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}{{ args.title }}{% endblock %}
+{% block content %}
+
+<h1>{{ args.title }}</h1>
+
+<form id="myForm" action="{{ args.url }}" method="GET">
+    <br/>
+    <b>Author 1:</b>
+    <select name="author1" id="author1">
+        {%
+        for author in args.authors
+        %}
+            <option value="{{ author }}">{{ author }}</option>
+        {%
+        endfor
+        %}
+    </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <b>Author 2:</b>
+    <select name="author2" id="author2">
+        {%
+        for author in args.authors
+        %}
+            <option value="{{ author }}">{{ author }}</option>
+        {%
+        endfor
+        %}
+    </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="submit" value="Calculate"/>
+    <br/>
+    <br/>
+</form>
+
+<br/>
+
+<table id="datatable" class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            {% for column in args.data[0]%}
+            <th style="vertical-align: middle">{{ column }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        {% for data_item in args.data[1]%}
+            <td>{{ data_item }}</td>
+        {% endfor %}
+    </tr>
+    </tbody>
+</table>
+
+{% endblock %}
