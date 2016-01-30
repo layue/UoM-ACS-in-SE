@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.cs.manchester.ac.uk/pgt/COMP60411/examples/quiz"
+    elementFormDefault="qualified"
+    xmlns:q="http://www.cs.manchester.ac.uk/pgt/COMP60411/examples/quiz">
+    <xs:element name="quiz">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="title" type="xs:string" />
+                <xs:element name="expr" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:choice>
+                            <xs:group ref="q:expr"/>
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:group name="expr">
+        <xs:choice>
+            <xs:element ref="q:plus"/>
+            <xs:element ref="q:times"/>
+            <xs:element ref="q:minus"/>
+            <xs:element ref="q:dividedBy"/>
+            <xs:element ref="q:number"/>
+        </xs:choice>
+    </xs:group>
+    <xs:element name="plus">
+        <xs:complexType>
+            <xs:group ref="q:expr" minOccurs="2" maxOccurs="2"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="times">
+        <xs:complexType>
+            <xs:group ref="q:expr" minOccurs="2" maxOccurs="2"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="minus">
+        <xs:complexType>
+            <xs:group ref="q:expr" minOccurs="2" maxOccurs="2"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="dividedBy">
+        <xs:complexType>
+            <xs:group ref="q:expr" minOccurs="2" maxOccurs="2"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="number" type="xs:decimal"/>
+</xs:schema>

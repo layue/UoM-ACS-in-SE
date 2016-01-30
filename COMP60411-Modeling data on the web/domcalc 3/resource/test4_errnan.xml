@@ -1,0 +1,13 @@
+<!-- This is an incorrect input, although valid wrt calc1.rnc!-->
+<expression>
+    <plus>
+        <times>
+            <int value="7"/>
+            <minus>
+                <int value="four"/>
+                <int value="24"/>
+            </minus>
+        </times>
+        <int value="7"/>
+    </plus>
+</expression>

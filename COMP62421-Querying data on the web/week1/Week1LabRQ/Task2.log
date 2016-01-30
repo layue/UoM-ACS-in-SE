@@ -1,0 +1,682 @@
+\project_{name}(Country\join_{code = country}geo_sea);
+Output schema: (Name text)
+-----
+Albania
+Algeria
+American Samoa
+Angola
+Anguilla
+Antigua and Barbuda
+Argentina
+Aruba
+Australia
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belgium
+Belize
+Benin
+Bermuda
+Bosnia and Herzegovina
+Brazil
+British Virgin Islands
+Brunei
+Bulgaria
+Cambodia
+Cameroon
+Canada
+Cape Verde
+Cayman Islands
+Ceuta
+Chile
+China
+Christmas Island
+Cocos Islands
+Colombia
+Comoros
+Congo
+Cook Islands
+Costa Rica
+Cote dIvoire
+Croatia
+Cuba
+Curacao
+Cyprus
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Falkland Islands
+Faroe Islands
+Fiji
+Finland
+France
+French Guiana
+French Polynesia
+Gabon
+Gambia
+Gaza Strip
+Georgia
+Germany
+Ghana
+Gibraltar
+Greece
+Greenland
+Grenada
+Guadeloupe
+Guam
+Guatemala
+Guernsey
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Honduras
+Hong Kong
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland
+Isle of Man
+Israel
+Italy
+Jamaica
+Japan
+Jersey
+Jordan
+Kenya
+Kiribati
+Kuwait
+Latvia
+Lebanon
+Liberia
+Libya
+Lithuania
+Macao
+Madagascar
+Malaysia
+Maldives
+Malta
+Marshall Islands
+Martinique
+Mauritania
+Mauritius
+Mayotte
+Melilla
+Mexico
+Micronesia
+Monaco
+Montenegro
+Montserrat
+Morocco
+Mozambique
+Myanmar
+Namibia
+Nauru
+Netherlands
+New Caledonia
+New Zealand
+Nicaragua
+Nigeria
+Niue
+Norfolk Island
+North Korea
+Northern Mariana Islands
+Norway
+Oman
+Pakistan
+Palau
+Panama
+Papua New Guinea
+Peru
+Philippines
+Pitcairn
+Poland
+Portugal
+Puerto Rico
+Qatar
+Reunion
+Romania
+Russia
+Saint Barthelemy
+Saint Helena
+Saint Kitts and Nevis
+Saint Lucia
+Saint Martin
+Saint Pierre and Miquelon
+Saint Vincent and the Grenadines
+Samoa
+Sao Tome and Principe
+Saudi Arabia
+Senegal
+Seychelles
+Sierra Leone
+Singapore
+Sint Maarten
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Korea
+Spain
+Sri Lanka
+Sudan
+Suriname
+Svalbard
+Sweden
+Syria
+Taiwan
+Tanzania
+Thailand
+Timor-Leste
+Togo
+Tokelau
+Tonga
+Trinidad and Tobago
+Tunisia
+Turkey
+Turks and Caicos Islands
+Tuvalu
+Ukraine
+United Arab Emirates
+United Kingdom
+United States
+Uruguay
+Vanuatu
+Venezuela
+Vietnam
+Virgin Islands
+Wallis and Futuna
+Western Sahara
+Yemen
+Zaire
+-----
+Total number of rows: 198
+
+
+\project_{name} Lake \union \project_{name} River \union \project_{name} Sea;
+Output schema: (Name text)
+-----
+Aare
+Adda
+Akagera
+Allegheny River
+Aller
+Alz
+Amazonas
+Ammer
+Ammersee
+Amudarja
+Amur
+Andaman Sea
+Angara
+Arabian Sea
+Arctic Ocean
+Argun
+Arkansas
+Arno
+Arresoe
+Aruwimi
+Asahan
+Atbara
+Atlantic Ocean
+Atlin Lake
+Bahr el-Djebel/Albert-Nil
+Bahr el-Ghasal
+Balaton
+Baltic Sea
+Banda Sea
+Bani
+Barents Sea
+Baro
+Barrage de Mbakaou
+Bartang
+Benue
+Bering Sea
+Black Drin
+Black Sea
+Blue Nile
+Bodensee
+Bomu
+Brahmaputra
+Breg
+Brienzersee
+Brigach
+Busira
+Caribbean Sea
+Caspian Sea
+Chad Lake
+Chatanga
+Chew Bahir
+Chickamauga Lake
+Chiemsee
+Chire
+Colorado
+Columbia River
+Connecticut River
+Crater Lake
+Cuango
+Cuilo
+Dalaelv
+Darling River
+Daryacheh ye Namak
+Dead Sea
+Detroit River
+Dnepr
+Dnister
+Dnjestr
+Don
+Donau
+Doubs
+Douro
+Drau
+Drin
+East China Sea
+East Sibirian Sea
+Ebro
+Elbe
+Enns
+Etoscha Salt Pan
+Etsch
+Eucumbene River
+Euphrat
+Fimi
+Fort Peck Lake
+Franklin. D. Roosevelt Lake
+Fulda
+Gambia
+Ganges
+Garonne
+Glomma
+Goetaaelv
+Great Bear Lake
+Great Salt Lake
+Great Slave Lake
+Greenland Sea
+Guadalquivir
+Guadiana
+Gulf of Aden
+Gulf of Bengal
+Gulf of Mexico
+Gulf of Oman
+Hamun e Jaz Murian
+Hudson Bay
+Hudson River
+Hwangho
+Ili
+Iller
+Inari
+Indian Ocean
+Indus
+Inn
+Irawaddy
+Irish Sea
+Irtysch
+Isar
+Ischim
+Isere
+Issyk-Kul
+Jangtse
+Java Sea
+Jenissej
+Joekulsa a Fjoellum
+Jordan
+Jubba
+Kakhovka Reservoir
+Kallavesi
+Kama
+Kara Sea
+Karasu
+Karun
+Kasai
+Kattegat
+Katun
+Kemijoki
+Kentucky Lake
+Kiev Reservoir
+Klaraelv
+Kokemaeenjoki
+Koli Sarez
+Kolyma
+Kremenchuk Reservoir
+Kura
+Kuybyshev Reservoir
+Kwa
+Kymijoki
+Laacher Maar
+Labrador Sea
+Lac Assal
+Lac Leman
+Lagen
+Lago Maggiore
+Lago Trasimeno
+Lago de Chapala
+Lago de Sobradinho
+Lago di Bolsena
+Lago di Bracciano
+Lago di Como
+Lago di Garda 
+Laguna Mar Chiquita
+Laguna de Bay
+Laguna de Gallocanta
+Lake Abaya
+Lake Abbe
+Lake Bangweulu
+Lake Bosumtwi
+Lake Burley Griffin
+Lake Cabora-Bassa
+Lake Champlain
+Lake Chilwa
+Lake Erie
+Lake Eucumbene
+Lake Eyasi
+Lake Eyre
+Lake Genezareth
+Lake Hume
+Lake Huron
+Lake Irazu
+Lake Jindabyne
+Lake Kainji
+Lake Kariba
+Lake Keban
+Lake Kioga
+Lake Kivu
+Lake Mai Ndombe
+Lake Malawi
+Lake Managua
+Lake Manicouagan
+Lake Manitou
+Lake Maracaibo
+Lake Mead
+Lake Michigan
+Lake Mweru
+Lake Nasser
+Lake Natron
+Lake Ngami
+Lake Nicaragua
+Lake Nipigon
+Lake Nyos
+Lake Oahe
+Lake Ohrid
+Lake Okeechobee
+Lake Ontario
+Lake Powell
+Lake Prespa
+Lake Rukwa
+Lake Sakakawea
+Lake Sese Seko/Albertsee
+Lake Skutari
+Lake Superior
+Lake Tahoe
+Lake Tana
+Lake Tanganjika
+Lake Titicaca
+Lake Toba
+Lake Turkana
+Lake Urmia
+Lake Van
+Lake Victoria
+Lake Volta
+Lake Winnipeg
+Lake Winnipesaukee
+Lech
+Leine
+Lena
+Licancabur Crater Lake
+Limmat
+Limpopo
+Loch Lomond
+Loch Ness
+Loire
+Lomami
+Lop Nor
+Lualaba
+Luapula
+Lukenie
+Lukuga
+Lulua
+Luvua
+Maas
+Mackenzie River
+Maelaren
+Main
+Makarikari Salt Pan
+Malakka Strait
+Malebo Pool
+Manicouagan
+March
+Marmara Sea
+Marne
+Mediterranean Sea
+Mekong
+Merrimack River
+Mincio
+Mississippi
+Missouri
+Mjoesa-See
+Moldau
+Morava
+Mosel
+Mur
+Murat
+Murgab
+Murray River
+Murrumbidgee River
+Nam Co
+Narew
+Narva
+Naryn
+Neckar
+Nelson River
+Neusiedlersee
+Newa
+Niagara River
+Niger
+Nile
+North Sea
+Northern Dwina
+Norwegian Sea
+Ob
+Oder
+Oesterdalaelv
+Ohio River
+Oka
+Okavango
+Olt
+Oranje
+Orinoco
+Oulujaervi
+Oulujoki
+Ounasjoki
+Ozero Aral
+Ozero Baikal
+Ozero Balchash
+Ozero Chanka
+Ozero Ladoga
+Ozero Onega
+Ozero Pskovskoje
+Ozero Taimyr
+Ozero Tschany
+Paatsjoki
+Pacific Ocean
+Paeijaenne
+Paraguay
+Parana
+Persian Gulf
+Petschora
+Pibor
+Pjandsh
+Po
+Poopo
+Pruth
+Prypjat
+Pyramid Lake
+Qinghai Lake
+Raab
+Red Sea
+Reuss
+Rhein
+Rhone
+Rio Desaguadero
+Rio Grande
+Rio Lerma
+Rio Madeira
+Rio Magdalena
+Rio Mamore
+Rio Negro
+Rio San Juan
+Rio Sao Francisco
+Riviere Richelieu
+Ruki
+Rutanzige/Eduardsee
+Ruzizi
+Saar
+Saimaa
+Saint Lawrence River
+Salar de Uyuni
+Saluen
+Salzach
+Sanaga
+Sanga
+Saone
+Saskatchewan River
+Save
+Schari
+Schatt al Arab
+Schilka
+Sea of Azov
+Sea of Japan
+Sea of Okhotsk
+Segara Anak
+Seine
+Selenge
+Semliki
+Senegal
+Shabelle
+Siljan
+Skagerrak
+Snowy River
+Sobat
+South China Sea
+Southern Morava
+Starnberger See
+Storuman
+Suchona
+Sulawesi Sea
+Sulu Sea
+Swir
+Syrdarja
+Tajo
+Tarim-Yarkend
+Tennessee
+Thames
+The Channel
+Theiss
+Thjorsa
+Thunersee
+Tiber
+Ticino
+Tigris
+Tobol
+Tocantins
+Truckee River
+Tshuapa
+Ubangi
+Uelle
+Umeaelv
+Ural
+Uruguay
+Vaal
+Vaenern
+Vaesterdalaelv
+Vaettern
+Victoria Nile
+Vierwaldstattersee
+Volga
+Volta
+Vuoksi
+Waag
+Weichsel
+Werra
+Weser
+Western Bug
+Western Dwina
+Western Morava
+White Drin
+White Nile
+WÃ¼rm
+Yellow Sea
+Yukon River
+Zaire
+Zambezi
+Zurichsee
+-----
+Total number of rows: 413
+
+
+\project_{avg(length)} River;
+Output schema: (avg(length) float)
+-----
+1164.9036
+-----
+Total number of rows: 1
+
+
+\project_{name}(country\join_{code=country}(\project_{country}(\select_{country like '%' Group by(country) having count(*)>10}(\project_{country, island} geo_island))));
+Output schema: (Name text)
+-----
+Canada
+Germany
+Greece
+Indonesia
+Italy
+Portugal
+Spain
+United Kingdom
+United States
+-----
+Total number of rows: 9
+
+
+\project_{length}(River\join_{name = Griver}(\rename_{Griver, Gcountry, Gprovince}(\select_{Country = "GB"} geo_river)));
+Output schema: (Length integer)
+-----
+346
+-----
+Total number of rows: 1
+
+
+\project_{name}(country \join_{code=country}(\project_{country}(geo_river \join_{river=name}(\project_{name}(\select_{name like '%' Order by(length) desc LIMIT 10} river)))));
+Output schema: (Name text)
+-----
+Brazil
+Cambodia
+China
+Colombia
+Congo
+Guinea
+Kazakhstan
+Laos
+Mali
+Niger
+Nigeria
+Peru
+Russia
+Thailand
+United States
+Vietnam
+Zaire
+-----
+Total number of rows: 17
+
+ÿBye!
+

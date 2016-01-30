@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Conference>
+    
+    <article>
+        <title value="Pushing the EL Envelope" />
+        <abstract value="Recently, it has been shown that the small descrip- tion logic (DL) EL, which allows for conjunction and existential restrictions, has better algorithmic properties than its counterpart F L0 , which allows for conjunction and value restrictions. Whereas the subsumption problem in FL0 becomes already in- tractable in the presence of acyclic TBoxes, it re- mains tractable in EL even with general concept inclusion axioms (GCIs). On the one hand, we ex- tend the positive result for EL by identifying a set of expressive means that can be added to EL with- out sacrificing tractability. On the other hand, we show that basically all other additions of typical DL constructors to EL with GCIs make subsump- tion intractable, and in most cases even EXPTIME- complete. In addition, we show that subsumption in FL0 with GCIs is EXPTIME-complete." />
+        <authorList>
+            <authorName value="Franz Baader" />
+            <authorName value="Sebastian Brandt" /> 
+            <authorName value="Carsten Lutz" /> 
+        </authorList>
+        <status value="submitted" />
+    </article>
+    
+    <article>
+        <title value="Web Semantics: Science, Services and Agents on the World Wide Web"/>
+        <abstract value="The OWL Web Ontology Language is a new formal language for representing ontologies in the Semantic Web. OWL has features from several families of representation languages, including primarily Description Logics and frames. OWL also shares many characteristics with RDF, the W3C base of the Semantic Web. In this paper, we discuss how the philosophy and features of OWL can be traced back to these older formalisms, with modifications driven by several other constraints on OWL. Several interesting problems have arisen where these influences on OWL have clashed." />
+        <authorList>
+            <authorName value="Ian Horrocks" /> 
+            <authorName value="Peter F. Patel-Schneider" /> 
+            <authorName value="Frank van Harmelen" /> 
+        </authorList>
+        <status value="published" />
+    </article>
+    
+    <article>
+        <title value="Semistructured data" />
+        <authorList>
+            <authorName value="Peter Buneman" /> 
+        </authorList>
+        <status value="published" />
+    </article>
+    
+    <author>
+        <name value="Franz Baader" />
+        <institution value="Theoretical Computer Science TU Dresden" />
+    </author>
+    
+    <author>
+        <name value="Sebastian Brandt" />
+        <institution value="Theoretical Computer Science TU Dresden" />
+    </author>
+    
+    <author>
+        <name value="Carsten Lutz" />
+        <institution value="Theoretical Computer Science TU Dresden" />
+    </author>
+    
+    <author>
+        <name value="Ian Horrocks" />
+        <institution value="Department of Computer Science, University of Manchester" />
+    </author>
+    
+    <author>
+        <name value="Peter F. Patel-Schneider" />
+        <institution value="Bell Labs Research, Lucent Technologies" />
+    </author>
+    
+    <author>
+        <name value="Frank van Harmelen" />
+        <institution value="AI Department, Vrije Universiteit Amsterdam" />
+    </author>
+    
+    <author>
+        <name value="Peter Buneman" />
+        <institution value="Department of Computer and Information Science, University of Pennsylvania" />
+    </author>
+    
+    <institution>
+        <name value="Theoretical Computer Science TU Dresden" />
+        <country value="Germany" />
+    </institution>
+    
+    <institution>
+        <name value="Department of Computer Science, University of Manchester" />
+        <address value="Oxford Road, Manchester M13 9PL" />
+        <country value="UK" />
+    </institution>
+    
+    <institution>
+        <name value="Bell Labs Research, Lucent Technologies"/>
+        <address value="600 Mountain Avenue, Murray Hill, NJ 07974" />
+        <country value="USA" />
+    </institution>
+    
+    <institution>
+        <name value="AI Department, Vrije Universiteit Amsterdam" />
+        <address value="de Boelelaan 1081a, 1081HV Amsterdam" />
+        <country value="The Netherlands" />
+    </institution>
+    
+    <institution>
+        <name value="Department of Computer and Information Science, University of Pennsylvania" />
+        <address value="Philadelphia" />
+        <country value="PA" />
+    </institution>
+    
+</Conference>

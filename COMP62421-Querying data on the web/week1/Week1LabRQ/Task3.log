@@ -1,0 +1,474 @@
+select name as Country_name, population/2 as Half_population from Country limit 10;
+Country_name  Half_population
+------------  ---------------
+Albania       1400069        
+Greece        5408143        
+Macedonia     1029897        
+Serbia        3560333        
+Montenegro    310014         
+Kosovo        866936         
+Andorra       39057          
+France        32466700       
+Spain         23407958       
+Austria       4249879        
+select name as Country_name, country as Country_code, province as Province_name, population as Population, elevation as Elevation, latitude as Latitude, longitude as Longitude
+from City
+where name = 'Manchester';
+Country_name  Country_code  Province_name  Population  Elevation   Latitude    Longitude 
+------------  ------------  -------------  ----------  ----------  ----------  ----------
+Manchester    GB            North West     510746                                        
+Manchester    USA           New Hampshire  109571                                        
+select name as City_name
+from City
+where name like 'Man%';
+City_name 
+----------
+Man       
+Manado    
+Managua   
+Manaus    
+Manbij    
+Manchester
+Manchester
+Mandalay  
+Mandaluyon
+Mangaung  
+Manila    
+Manisa    
+Manizales 
+Mannheim  
+Manokwari 
+Mansa     
+Manzanillo
+Manzhouli 
+select country.name as Country_name, organization.name as Organization_name
+from country, organization, religion, isMember
+where country.code = religion.country and religion.name = 'Buddhist' and organization.established > '1994-12-01' and isMember.country = Country.code and isMember.organization = Organization.abbreviation;
+Country_name  Organization_name       
+------------  ------------------------
+Australia     Community of Democracies
+Australia     East Asia Summit        
+Australia     Group of 20             
+Australia     International Criminal C
+Australia     International Mobile Sat
+Australia     International Trade Unio
+Australia     Organization for the Pro
+Australia     United Nations Mission i
+Australia     United Nations Integrate
+Bhutan        Organization for the Pro
+Brunei        East Asia Summit        
+Brunei        International Mobile Sat
+Brunei        Organization for the Pro
+Sri Lanka     Community of Democracies
+Sri Lanka     Conference of Interactio
+Sri Lanka     International Mobile Sat
+Sri Lanka     International Trade Unio
+Sri Lanka     United Nations Organizat
+Sri Lanka     Organization for the Pro
+Sri Lanka     Shanghai Cooperation Org
+Sri Lanka     United Nations Interim S
+Sri Lanka     United Nations Mission i
+United Kingd  Community of Democracies
+United Kingd  Group of 20             
+United Kingd  International Criminal C
+United Kingd  International Mobile Sat
+United Kingd  International Trade Unio
+United Kingd  United Nations Organizat
+United Kingd  Organization for the Pro
+United Kingd  Organization for Securit
+United Kingd  Convention of the Southe
+United Kingd  United Nations Mission i
+Italy         Community of Democracies
+Italy         European Central Bank   
+Italy         Group of 20             
+Italy         International Criminal C
+Italy         International Mobile Sat
+Italy         International Trade Unio
+Italy         Organization for the Pro
+Italy         Organization for Securit
+Italy         Convention of the Southe
+Italy         United Nations Mission i
+India         Community of Democracies
+India         Conference of Interactio
+India         East Asia Summit        
+India         Group of 20             
+India         International Mobile Sat
+India         International Trade Unio
+India         United Nations Organizat
+India         Organization for the Pro
+India         Shanghai Cooperation Org
+India         United Nations Interim S
+India         United Nations Mission i
+India         United Nations Integrate
+India         United Nations Operation
+Japan         Community of Democracies
+Japan         Conference of Interactio
+Japan         East Asia Summit        
+Japan         Group of 20             
+Japan         International Criminal C
+Japan         International Mobile Sat
+Japan         International Trade Unio
+Japan         Organization for the Pro
+Japan         Convention of the Southe
+Japan         United Nations Mission i
+Japan         United Nations Integrate
+Cambodia      Conference of Interactio
+Cambodia      East Asia Summit        
+Cambodia      International Criminal C
+Cambodia      International Trade Unio
+Cambodia      Organization for the Pro
+Cambodia      African Union/United Nat
+Cambodia      United Nations Interim S
+Cambodia      United Nations Mission i
+Laos          East Asia Summit        
+Laos          Organization for the Pro
+Malaysia      Conference of Interactio
+Malaysia      Developing Eight        
+Malaysia      East Asia Summit        
+Malaysia      International Mobile Sat
+Malaysia      International Trade Unio
+Malaysia      United Nations Organizat
+Malaysia      Organization for the Pro
+Malaysia      African Union/United Nat
+Malaysia      United Nations Mission i
+Malaysia      United Nations Integrate
+Mongolia      Community of Democracies
+Mongolia      Conference of Interactio
+Mongolia      International Criminal C
+Mongolia      International Mobile Sat
+Mongolia      International Trade Unio
+Mongolia      United Nations Organizat
+Mongolia      Organization for the Pro
+Mongolia      Organization for Securit
+Mongolia      Shanghai Cooperation Org
+Mongolia      African Union/United Nat
+Mongolia      United Nations Interim S
+Mongolia      United Nations Mission i
+Myanmar       East Asia Summit        
+Myanmar       International Trade Unio
+Myanmar       Organization for the Pro
+Nepal         Community of Democracies
+Nepal         International Trade Unio
+Nepal         United Nations Organizat
+Nepal         Organization for the Pro
+Nepal         African Union/United Nat
+Nepal         United Nations Interim S
+Nepal         United Nations Mission i
+Nepal         United Nations Mission i
+Nepal         United Nations Integrate
+Nepal         United Nations Operation
+New Zealand   Community of Democracies
+New Zealand   East Asia Summit        
+New Zealand   International Criminal C
+New Zealand   International Mobile Sat
+New Zealand   International Trade Unio
+New Zealand   Organization for the Pro
+New Zealand   United Nations Mission i
+New Zealand   United Nations Integrate
+Indonesia     Community of Democracies
+Indonesia     Conference of Interactio
+Indonesia     Developing Eight        
+Indonesia     East Asia Summit        
+Indonesia     Group of 20             
+Indonesia     International Mobile Sat
+Indonesia     International Trade Unio
+Indonesia     United Nations Organizat
+Indonesia     Organization for the Pro
+Indonesia     African Union/United Nat
+Indonesia     United Nations Mission i
+Indonesia     United Nations Mission i
+South Korea   Community of Democracies
+South Korea   Conference of Interactio
+South Korea   East Asia Summit        
+South Korea   Group of 20             
+South Korea   International Criminal C
+South Korea   International Mobile Sat
+South Korea   International Trade Unio
+South Korea   Organization for the Pro
+South Korea   African Union/United Nat
+South Korea   United Nations Mission i
+South Korea   United Nations Mission i
+South Korea   United Nations Operation
+Philippines   Community of Democracies
+Philippines   Conference of Interactio
+Philippines   East Asia Summit        
+Philippines   International Criminal C
+Philippines   International Mobile Sat
+Philippines   International Trade Unio
+Philippines   Organization for the Pro
+Philippines   United Nations Interim S
+Philippines   United Nations Mission i
+Philippines   United Nations Integrate
+Philippines   United Nations Operation
+Thailand      Community of Democracies
+Thailand      Conference of Interactio
+Thailand      East Asia Summit        
+Thailand      International Mobile Sat
+Thailand      International Trade Unio
+Thailand      Organization for the Pro
+Thailand      African Union/United Nat
+United State  Community of Democracies
+United State  Conference of Interactio
+United State  East Asia Summit        
+United State  Group of 20             
+United State  International Mobile Sat
+United State  International Trade Unio
+United State  United Nations Organizat
+United State  Organization for the Pro
+United State  Organization for Securit
+United State  Convention of the Southe
+United State  United Nations Mission i
+United State  United Nations Mission i
+Vietnam       Conference of Interactio
+Vietnam       East Asia Summit        
+Vietnam       International Mobile Sat
+Vietnam       Organization for the Pro
+select country.name as Country, ifnull(numbers.times, 0) as Numbers
+from Country country left outer join (select island.country,count(*) as times from geo_island island group by island.country) numbers 
+on numbers.country=country.code;
+Country     Numbers   
+----------  ----------
+Albania     0         
+Greece      13        
+Macedonia   0         
+Serbia      1         
+Montenegro  0         
+Kosovo      0         
+Andorra     0         
+France      1         
+Spain       11        
+Austria     0         
+Czech Repu  0         
+Germany     15        
+Hungary     2         
+Italy       11        
+Liechtenst  0         
+Slovakia    4         
+Slovenia    0         
+Switzerlan  0         
+Belarus     0         
+Latvia      0         
+Lithuania   0         
+Poland      1         
+Ukraine     0         
+Russia      5         
+Belgium     0         
+Luxembourg  0         
+Netherland  5         
+Bosnia and  0         
+Croatia     0         
+Bulgaria    0         
+Romania     0         
+Turkey      0         
+Denmark     7         
+Estonia     2         
+Faroe Isla  1         
+Finland     1         
+Norway      1         
+Sweden      2         
+Monaco      0         
+Gibraltar   0         
+Guernsey    1         
+Holy See    0         
+Ceuta       0         
+Melilla     0         
+Iceland     1         
+Ireland     1         
+San Marino  0         
+Jersey      1         
+Malta       2         
+Isle of Ma  1         
+Moldova     0         
+Portugal    11        
+Svalbard    1         
+United Kin  32        
+Afghanista  0         
+China       1         
+Iran        3         
+Pakistan    0         
+Tajikistan  0         
+Turkmenist  0         
+Uzbekistan  0         
+Armenia     0         
+Georgia     0         
+Azerbaijan  0         
+Bahrain     1         
+Bangladesh  0         
+Myanmar     0         
+India       2         
+Bhutan      0         
+Brunei      1         
+Malaysia    3         
+Laos        0         
+Thailand    2         
+Cambodia    0         
+Vietnam     0         
+Kazakhstan  0         
+North Kore  0         
+Kyrgyzstan  0         
+Hong Kong   0         
+Macao       0         
+Mongolia    0         
+Nepal       0         
+Christmas   1         
+Cocos Isla  1         
+Cyprus      1         
+Gaza Strip  0         
+Israel      0         
+Egypt       0         
+Indonesia   39        
+Timor-Lest  1         
+Papua New   2         
+Iraq        0         
+Jordan      0         
+Kuwait      0         
+Saudi Arab  0         
+Syria       0         
+Lebanon     0         
+West Bank   0         
+Japan       47        
+South Kore  1         
+Maldives    1         
+Oman        0         
+United Ara  0         
+Yemen       1         
+Philippine  22        
+Qatar       0         
+Singapore   1         
+Sri Lanka   1         
+Taiwan      1         
+Anguilla    1         
+Antigua an  2         
+Aruba       1         
+Bahamas     1         
+Barbados    1         
+Belize      0         
+Guatemala   0         
+Mexico      0         
+Bermuda     1         
+British Vi  1         
+Canada      13        
+United Sta  16        
+Cayman Isl  3         
+Costa Rica  0         
+Nicaragua   1         
+Panama      0         
+Cuba        14        
+Dominica    1         
+Dominican   1         
+Haiti       1         
+El Salvado  0         
+Honduras    0         
+Greenland   1         
+Grenada     1         
+Guadeloupe  2         
+Jamaica     1         
+Martinique  1         
+Montserrat  1         
+Curacao     1         
+Sint Maart  1         
+Saint Mart  1         
+Saint Bart  1         
+Colombia    1         
+Puerto Ric  1         
+Saint Kitt  2         
+Saint Luci  1         
+Saint Pier  2         
+Saint Vinc  1         
+Trinidad a  2         
+Turks and   3         
+Virgin Isl  1         
+American S  1         
+Australia   3         
+Cook Islan  1         
+Fiji        2         
+French Pol  1         
+Guam        1         
+Kiribati    1         
+Marshall I  1         
+Micronesia  1         
+Nauru       1         
+New Caledo  1         
+New Zealan  2         
+Niue        1         
+Norfolk Is  1         
+Northern M  3         
+Palau       2         
+Pitcairn    1         
+Solomon Is  1         
+Tonga       1         
+Tuvalu      1         
+Tokelau     1         
+Vanuatu     1         
+Wallis and  2         
+Samoa       2         
+Argentina   0         
+Bolivia     0         
+Brazil      0         
+Chile       1         
+Paraguay    0         
+Uruguay     0         
+Peru        0         
+French Gui  0         
+Guyana      0         
+Suriname    0         
+Venezuela   0         
+Ecuador     1         
+Falkland I  2         
+Algeria     0         
+Libya       0         
+Mali        0         
+Mauritania  0         
+Morocco     0         
+Niger       0         
+Tunisia     0         
+Western Sa  0         
+Angola      0         
+Congo       0         
+Namibia     0         
+Zaire       0         
+Zambia      0         
+Benin       0         
+Burkina Fa  0         
+Nigeria     0         
+Togo        0         
+Botswana    0         
+South Afri  0         
+Zimbabwe    0         
+Cote dIvoi  0         
+Ghana       0         
+Burundi     0         
+Rwanda      0         
+Tanzania    2         
+Cameroon    0         
+Central Af  0         
+Chad        0         
+Equatorial  1         
+Gabon       0         
+Cape Verde  2         
+Sudan       0         
+South Suda  0         
+Comoros     3         
+Guinea      0         
+Liberia     0         
+Djibouti    0         
+Eritrea     0         
+Ethiopia    0         
+Somalia     0         
+Kenya       0         
+Gambia      0         
+Senegal     0         
+Guinea-Bis  0         
+Sierra Leo  0         
+Uganda      0         
+Lesotho     0         
+Madagascar  1         
+Malawi      0         
+Mozambique  0         
+Mauritius   1         
+Mayotte     1         
+Swaziland   0         
+Reunion     1         
+Saint Hele  3         
+Sao Tome a  2         
+Seychelles  1         

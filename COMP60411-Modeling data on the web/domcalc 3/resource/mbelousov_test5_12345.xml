@@ -1,0 +1,72 @@
+<expression>
+    <!-- This expression evaluates to 12345 -->
+    <!--
+         246 +
+                (12 - 4 * 7) +
+                (513 *
+                    (-1 + 2 + -3 + 5 +
+                        (5-2) * (9 + 1 + -3)) *
+                    (-1 * (((2 * (-7 - -10)) +
+                           ((2 + -1 + -1) * 4) +
+                           -1) + (-2 * 3)))) +
+                (-197))
+    -->
+    <plus>
+        <int value="246"/>
+        <minus>
+            <int value="12"/>
+            <times>
+                <int value="4"/>
+                <int value="7"/>
+            </times>
+        </minus>
+        <times>
+            <int value="513"/>
+            <plus>
+                <int value="-1"/>
+                <int value="2"/>
+                <int value="-3"/>
+                <int value="5"/>
+                <times>
+                    <minus>
+                        <int value="5"/>
+                        <int value="2"/>
+                    </minus>
+                    <plus>
+                        <int value="9"/>
+                        <int value="1"/>
+                        <int value="-3"/>
+                    </plus>
+                </times>
+            </plus>
+            <times>
+                <int value="-1"/>
+                <plus>
+                    <plus>
+                        <times>
+                            <int value="2"/>
+                            <minus>
+                                <int value="-7"/>
+                                <int value="-10"/>
+                            </minus>
+                        </times>
+                        <times>
+                            <plus>
+                                <int value="2"/>
+                                <int value="-1"/>
+                                <int value="-1"/>
+                            </plus>
+                            <int value="4"/>
+                        </times>
+                        <int value="-1"/>
+                    </plus>
+                    <times>
+                        <int value="-2"/>
+                        <int value="3"/>
+                    </times>
+                </plus>
+            </times>
+        </times>
+        <int value="-197"/>
+    </plus>
+</expression>

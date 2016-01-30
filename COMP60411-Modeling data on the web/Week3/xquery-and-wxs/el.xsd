@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified"
+  targetNamespace="http://www.cs.manchester.ac.uk/pgt/COMP60411/el"
+  xmlns:el="http://www.cs.manchester.ac.uk/pgt/COMP60411/el">
+  <xs:element name="dltheory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="el:author" />
+        <xs:element ref="el:last-revised-on"/>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:group ref="el:Axiom"/>
+          <xs:group ref="el:Annotation"/>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="author" type="xs:string"/>
+  <xs:element name="last-revised-on" type="xs:date"/>
+  <xs:group name="Annotation">
+    <xs:choice>
+      <xs:element ref="el:comment" />
+      <xs:element ref="el:web-source"/>
+    </xs:choice>
+  </xs:group>
+  
+  <xs:element name="comment" type="xs:string"/>
+  <xs:element name="web-source" type="xs:anyURI"/>
+  <xs:group name="Axiom">
+    <xs:choice>
+      <xs:element ref="el:equivalent"/>
+      <xs:element ref="el:subsumes"/>
+      <xs:element ref="el:instance-of"/>
+      <xs:element ref="el:related-to"/>
+    </xs:choice>
+  </xs:group>
+
+  <xs:group name="ClassExpression">
+    <xs:choice>
+      <xs:element ref="el:atomic"/>
+      <xs:element ref="el:conjunction"/>
+      <xs:element ref="el:exists"/>
+    </xs:choice>
+  </xs:group>
+
+  <xs:group name="Entities">
+    <xs:choice>
+      <xs:element ref="el:atomic"/>
+      <xs:element ref="el:constant"/>
+    </xs:choice>
+  </xs:group>
+
+  <xs:element name="equivalent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group minOccurs="2" maxOccurs="unbounded" ref="el:ClassExpression"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="subsumes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group minOccurs="2" maxOccurs="2" ref="el:ClassExpression"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="instance-of">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="el:constant"/>
+        <xs:group ref="el:ClassExpression"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="related-to">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="el:constant"/>
+        <xs:element ref="el:constant"/>
+      </xs:sequence>
+      <xs:attribute name="prop" use="required" type="xs:NMTOKEN"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="conjunction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group minOccurs="0" maxOccurs="unbounded" ref="el:ClassExpression"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="exists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:group ref="el:ClassExpression"/>
+      </xs:sequence>
+      <xs:attribute name="prop" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="atomic">
+    <xs:complexType>
+      <xs:attribute name="name" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="constant">
+    <xs:complexType>
+      <xs:attribute name="name" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

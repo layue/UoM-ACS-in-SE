@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rota>
+    <families>
+    <family name="Smith">
+        <MainContact>
+            <FirstName>Ben</FirstName>
+            <LastName>Smith</LastName>
+        </MainContact>
+        <AuxillaryContact>
+            <FirstName>Mindy</FirstName>
+            <LastName>Smith</LastName>
+        </AuxillaryContact>
+    </family>
+    <family name="Miller">
+        <MainContact>
+            <FirstName>Bill</FirstName>
+            <LastName>Miller</LastName>
+        </MainContact>
+        <AuxillaryContact>
+            <FirstName>Betty</FirstName>
+            <LastName>Miller</LastName>
+        </AuxillaryContact>
+    </family>
+    <family name="King">
+        <MainContact>
+            <FirstName>Paula</FirstName>
+            <LastName>King</LastName>
+        </MainContact>
+        <AuxillaryContact>
+            <FirstName>Bob</FirstName>
+            <LastName>King</LastName>
+        </AuxillaryContact>
+        <AuxillaryContact>
+            <FirstName>Mary</FirstName>
+            <LastName>King</LastName>
+        </AuxillaryContact>
+    </family>
+
+    </families>
+    <houses>
+        <house name="HighBrow" castle="true"/>
+        <house name="LittleWoods"/>
+        <house name="MyCastle"/>    
+        
+    </houses>
+    <occupancy>
+        <period time="1" family="Miller" house="HighBrow"/> 
+        <period time="1" family="King" house="LittleWoods"/>
+        <period time="1" family="Smith" house="MyCastle"/>
+        <period time="2" family="King" house="HighBrow"/>
+        <period time="2" family="Smith" house="LittleWoods"/>
+        <period time="2" family="Miller" house="MyCastle"/>
+        
+    </occupancy>
+</rota>

@@ -1,0 +1,4 @@
+<expression>
+    <!-- This expression does not need to evaluate. Result is simply 10.-->
+    <int value="10"/>
+</expression>

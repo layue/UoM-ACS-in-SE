@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a>
+    
+    <a xmlns:bar="uri1"/>
+    <a xmlns:bar="uri2"/>
+</a>

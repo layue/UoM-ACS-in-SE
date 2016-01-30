@@ -1,0 +1,16 @@
+<!-- This document is valid wrt calc1.rnc -->
+<expression>
+    <!-- This expression evaluates to -133.
+         It was one of the examples.
+         7*(4-24)+7-->
+    <plus>
+        <times>
+            <int value="7"/>
+            <minus>
+                <int value="4"/>
+                <int value="24"/>
+            </minus>
+        </times>
+        <int value="7"/>
+    </plus>
+</expression>

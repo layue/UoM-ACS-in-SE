@@ -1,0 +1,19 @@
+
+<expression>
+    <!-- This expression evaluates to 2 -->
+    <plus>
+        <int value="5"/>
+        <int value="10"/>
+        <int value="5"/>
+        <times>
+            <int value="3"/>
+            <minus>
+                <int value="4"/>
+                <plus>
+                    <int value="1000"/>
+                    <int value="3"/>
+                </plus>
+            </minus>
+        </times>
+    </plus>
+</expression>

@@ -1,0 +1,42 @@
+# RelaxNG supports only very simple datatype: text. If you want more complex ones, 
+# you can 'import' them from XML Schema (another XML schema language) by including the following line: 
+# 
+#  datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+# 
+# with this line, we could have written 
+# 
+#  int-description = element int { attribute value { xsd:integer }, empty }
+# 
+# and suitable validating parsers would have understood this, i.e., rejected elements like <int value="a"/> 
+
+
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+grammar  
+
+{start = expression-description 
+
+expression-description = element expression {expr-description}
+
+expr-description  = plus-description | times-description | minus-description | int-description
+#  plus and times are n-ary, where n is greater
+# than 2. 
+
+plus-description = element plus { expr-description, expr-description+ }
+
+times-description = element times { expr-description, expr-description+ }
+
+# Note that minus is a *binary* operation
+minus-description = element minus { expr-description, expr-description }
+
+
+#  Ints are empty elements. I use an attribute
+# for the value. For now, there's no special reason
+# for this; I put an *inadequate*
+# type constraint on it. It's not even shorter, viz.:
+#    <int>576</int>
+#    <int value="572"/>
+
+#int-description = element int { attribute value { xsd:integer { minInclusive = "-1000" maxInclusive = "1000"}}, empty }
+
+int-description = element int { attribute value { xsd:integer { minInclusive = "-1000" maxInclusive = "1000"}}, empty}

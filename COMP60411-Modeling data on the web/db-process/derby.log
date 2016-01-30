@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri Oct 09 02:21:05 BST 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.2 - (1495037): instance a816c00e-0150-4a2f-e991-000004688e58 
+on database directory /Users/X/Downloads/db-process/DATABASE with class loader sun.misc.Launcher$AppClassLoader@5ab8df17 
+Loaded from file:/Users/X/Downloads/db-process/derby.jar
+java.vendor=Apple Inc.
+java.runtime.version=1.6.0_65-b14-466.1-11M4716
+user.dir=/Users/X/Downloads/db-process
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.10.5
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

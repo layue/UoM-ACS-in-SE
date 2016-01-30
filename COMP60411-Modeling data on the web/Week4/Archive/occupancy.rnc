@@ -1,0 +1,29 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+grammar {
+
+start =
+  element rota {
+    element families {
+      element family {
+        attribute name { xsd:string },
+        element MainContact { FirstName, LastName },
+        element AuxillaryContact { FirstName, LastName }+
+      }+
+    },
+    element houses {
+      element house {
+        attribute castle { xsd:boolean }?,
+        attribute name { xsd:string  }
+      }+
+    },
+    element occupancy {
+      element period {
+        attribute family { xsd:string  },
+        attribute house { xsd:string  },
+        attribute time { xsd:integer }
+      }+
+    }
+  }
+FirstName = element FirstName { xsd:string  }
+LastName = element LastName { xsd:string  }}

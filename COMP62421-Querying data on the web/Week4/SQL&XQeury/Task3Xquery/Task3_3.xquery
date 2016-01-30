@@ -1,0 +1,1 @@
+avg(doc('river_a.xml')//river/river-tuple/@length[data()!='MISSING'])

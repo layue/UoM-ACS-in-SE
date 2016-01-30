@@ -1,0 +1,1 @@
+avg( doc('mondial.xml')//river/length/text())

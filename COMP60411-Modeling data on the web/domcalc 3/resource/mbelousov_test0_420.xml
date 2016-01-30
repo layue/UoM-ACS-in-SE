@@ -1,0 +1,4 @@
+<expression>
+    <!-- This expression evaluates to 42 -->
+    <int value="420"/>
+</expression>

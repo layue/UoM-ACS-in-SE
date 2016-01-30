@@ -1,0 +1,22 @@
+<!-- This is not valid. (Why not?)-->
+<expression>
+    <!-- This expression evaluates to 9.
+        It was one of the examples.-->
+    <plus>
+        <int value="4"/>
+        <int value="5"/>
+    </plus>
+    <!-- This expression evaluates to -133.
+        It was one of the examples.
+        7*(4-24)+7-->
+    <plus>
+        <times>
+            <int value="7"/>
+            <minus>
+                <int value="4"/>
+                <int value="24"/>
+            </minus>
+        </times>
+        <int value="7"/>
+    </plus>
+</expression>

@@ -1,0 +1,4 @@
+<!-- This is an incorrect input, although valid wrt calc1.rnc!-->
+<expression>
+    <int value="1.2"/>
+</expression>

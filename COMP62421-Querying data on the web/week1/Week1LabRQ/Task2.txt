@@ -1,0 +1,11 @@
+\project_{name}(Country\join_{code = country}geo_sea);
+
+\project_{name} Lake \union \project_{name} River \union \project_{name} Sea;
+
+\project_{avg(length)} River;
+
+\project_{name}(country\join_{code=country}(\project_{country}(\select_{country like '%' Group by(country) having count(*)>10}(\project_{country, island} geo_island))));
+
+\project_{length}(River\join_{name = Griver}(\rename_{Griver, Gcountry, Gprovince}(\select_{Country = "GB"} geo_river)));
+
+\project_{name}(country \join_{code=country}(\project_{country}(geo_river \join_{river=name}(\project_{name}(\select_{name like '%' Order by(length) desc LIMIT 10} river)))));

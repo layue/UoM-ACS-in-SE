@@ -1,0 +1,61 @@
+# RelaxNG supports only very simple datatype: text. If you want more complex ones, 
+# you can 'import' them from XML Schema (another XML schema language) by including the following line: 
+# 
+#  datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+# 
+# with this line, we could have written 
+# 
+#  int-description = element int { attribute value { xsd:integer }, empty }
+# 
+# and suitable validating parsers would have understood this, i.e., rejected elements like <int value="a"/> 
+
+grammar  
+
+{start = expression-description 
+
+expression-description = element expression {expr-description, comment-description*}
+
+expr-description  = plus-description | times-description | minus-description | int-description | dec-description
+#  plus and times are n-ary
+
+# add comment element, whose tags are b or i
+comment-description = element comment { text & ((element b {text} *) | (element i {text}*) )* }
+
+# add restriction to plus operation, it is n-ary operation, when n >= 1
+plus-description = element plus { expr-description, expr-description* }
+
+# define times operation, it is n-ary operation, when n >= 2
+times-description = element times { expr-description, expr-description+ }
+
+# add restriction to minus oepration, it is n-ary operation now, when n >= 1
+minus-description = element minus { expr-description, expr-description* }
+
+
+# define the division operation, which is a *binary* operation 
+division-description = element divi { expr-description, expr-description }
+
+
+#  Ints are empty elements. I use an attribute
+# for the value. For now, there's no special reason
+# for this; I put an *inadequate*
+# type constraint on it. It's not even shorter, viz.:
+#    <int>576</int>
+#    <int value="572"/>
+
+
+# add restriction to int element, making it in the range of [-1000, 1000]
+int-description = element int { attribute value { xsd:integer { minInclusive = "-1000" maxInclusive = "1000" } }, empty }
+
+
+# define a decimal element, which belongs to  [-1000, 1000]
+dec-description = element dec { attribute value { xsd:decimal { minInclusive = "-1000" maxInclusive = "1000" } }, empty }
+}
+
+
+
+
+
+
+
+
+

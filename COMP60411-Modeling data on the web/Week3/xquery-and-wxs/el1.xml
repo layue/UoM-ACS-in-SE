@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dltheory xmlns="http://www.cs.manchester.ac.uk/pgt/COMP60411/el" xmlns:el="http://www.cs.manchester.ac.uk/pgt/COMP60411/el"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.cs.manchester.ac.uk/pgt/COMP60411/el
+    el.xsd">
+    <author>Bijan Parsia</author>
+    <last-revised-on>2010-02-12</last-revised-on>
+    
+    <comment>Sally is a good friend.</comment>
+    <instance-of>
+        <constant name="sally"/>
+        <atomic name="Person"/>
+    </instance-of>
+    
+    <comment>While I trust the following axiom is obvious, 
+    you can also find it in Wikipedia.</comment>
+    <web-source>http://en.wikipedia.org/wiki/Human</web-source>
+    <subsumes>
+        <atomic name="Human"/>
+        <atomic name="LivingThing"/>
+    </subsumes>
+    
+    <subsumes>
+        <conjunction>
+            <atomic name="Human"/>
+            <exists prop="hasParent">
+                <atomic name="Person"/>
+            </exists>
+        </conjunction>
+        <atomic name="Person"/>
+    </subsumes>
+    
+    <comment>This is true in common discussion, at least.</comment>
+    <equivalent>
+        <atomic name="Human"/>
+        <atomic name="HomoSapiens"/>
+    </equivalent>
+    
+    <instance-of>
+        <constant name="sheeva"/>
+        <atomic name="Human"/>
+    </instance-of>
+    
+    <related-to prop="hasParent">
+        <constant name="sheeva"/>
+        <constant name="sally"/>
+    </related-to>
+</dltheory>

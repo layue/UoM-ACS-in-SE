@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"> 
+    
+    <xs:element name="Conference">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element ref="article" />
+                    <xs:element ref="author" />
+                    <xs:element ref="institution" />
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="article">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="title" >
+                    <xs:complexType>
+                        <xs:attribute name="value" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="abstract">
+                    <xs:complexType>
+                        <xs:attribute name="value" use="optional"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element ref="authorList" />
+                <xs:element name="status">
+                    <xs:complexType>
+                        <xs:attribute name="value" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="authorList">
+        <xs:complexType>
+            <xs:group ref="authorList" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:group name="authorList">
+        <xs:sequence>
+            <xs:element name="authorName">
+                <xs:complexType>
+                    <xs:attribute name="value" use="required"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:group>
+    
+    <xs:element name="author">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name">
+                    <xs:complexType>
+                        <xs:attribute name="value" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="username">
+                    <xs:complexType>
+                        <xs:attribute name="value" use="optional"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="institution">
+                    <xs:complexType>
+                        <xs:attribute name="value" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="institution">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name">
+                    <xs:complexType>
+                        <xs:attribute name="value" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="address">
+                    <xs:complexType>
+                        <xs:attribute name="value" use="optional"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="country">
+                    <xs:complexType>
+                        <xs:attribute name="value" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,6 @@
+<a:expression xmlns="foo1" xmlns:a="foo2" xmlns:b="bah">
+    <b:plus>
+        <int value = "3"/>
+        <a:int value = "3"/>
+    </b:plus>
+</a:expression>

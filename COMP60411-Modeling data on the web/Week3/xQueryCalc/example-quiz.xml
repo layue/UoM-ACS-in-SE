@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz xmlns="http://www.cs.manchester.ac.uk/pgt/COMP60411/examples/quiz"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.cs.manchester.ac.uk/pgt/COMP60411/examples/quiz quiz.xsd">
+    <title>Foo</title>
+    <expr>
+        <plus>
+            <number>1</number>
+            <number>5</number>
+        </plus>
+    </expr>
+    <expr>
+        <dividedBy>
+            <number>1024</number>
+            <times>
+                <times>
+                    <number>256</number>
+                    <number>2</number>
+                    </times>
+                <number>2</number>
+            </times>
+        </dividedBy>
+    </expr>
+</quiz>
